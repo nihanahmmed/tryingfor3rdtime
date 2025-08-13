@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nihan — Personal Branding & Email Signature Design</title>
+  <meta name="description" content="Nihan — Professional graphic designer specializing in email signature design, brand identity, and visual systems." />
+  <style>
+    :root{
+      --bg:#0b1220; /* dark navy */
+      --bg-soft:#0f172a; /* slate-900 */
+      --card:#0f1a32;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --brand:#3b82f6; /* primary */
+      --brand-2:#22d3ee; /* accent */
+      --ring:rgba(59,130,246,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92%);margin:0 auto}
+    header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,rgba(11,18,32,.9),rgba(11,18,32,.65) 60%,rgba(11,18,32,0));backdrop-filter:saturate(140%) blur(6px)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 8px 24px rgba(34,211,238,.35)}
+    .links{display:flex;gap:18px}
+    .links a{color:var(--text);opacity:.8;font-weight:600}
+    .links a:hover{opacity:1}
+    .menu{display:none}
+
+    /* Hero */
+    .hero{padding:72px 0 36px;background:radial-gradient(1200px 600px at 10% -10%, rgba(59,130,246,.18), transparent 60%),radial-gradient(800px 400px at 90% 10%, rgba(34,211,238,.14), transparent 60%)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .title{font-size:42px;line-height:1.1;margin:0 0 12px}
+    .subtitle{color:var(--muted);font-size:16px;line-height:1.8;margin:0 0 22px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid transparent;transition:.2s}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;box-shadow:0 10px 28px var(--ring)}
+    .btn-outline{border-color:rgba(148,163,184,.35);color:var(--text)}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(148,163,184,.12);border:1px solid rgba(148,163,184,.25);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px;margin-bottom:14px}
+
+    /* Cards */
+    .section{padding:40px 0}
+    .section h2{font-size:28px;margin:0 0 8px}
+    .section p.lead{color:var(--muted);margin:0 0 20px}
+    .grid{display:grid;gap:16px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:linear-gradient(180deg,rgba(15,26,50,.9),rgba(17,24,39,.9));border:1px solid rgba(148,163,184,.18);border-radius:16px;padding:18px}
+    .card h3{margin:6px 0 8px;font-size:18px}
+    .muted{color:var(--muted)}
+
+    .feature{display:flex;gap:12px}
+    .badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));flex:0 0 auto}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+    .tile{border-radius:12px;overflow:hidden;border:1px solid rgba(148,163,184,.18)}
+
+    /* Pricing */
+    .price{font-size:28px;font-weight:800}
+    .list{margin:10px 0 0;padding:0 0 0 18px;color:var(--muted)}
+
+    /* Testimonials */
+    .quote{font-style:italic;color:#dbeafe}
+
+    /* Contact */
+    form{display:grid;gap:10px}
+    input,textarea{background:#0b1326;border:1px solid rgba(148,163,184,.25);border-radius:10px;padding:12px 12px;color:var(--text)}
+    input:focus,textarea:focus{outline:none;box-shadow:0 0 0 3px var(--ring);border-color:transparent}
+
+    footer{padding:28px 0;border-top:1px solid rgba(148,163,184,.18);color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width: 880px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .links{display:none}
+      .menu{display:inline-flex;align-items:center;gap:8px;color:var(--text);opacity:.9}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <strong>Nihan</strong>
+      </div>
+      <nav class="links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="menu" href="#contact">Let’s Talk →</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="pill">Email Signature Design • Brand Identity • UI-ready Assets</div>
+        <h1 class="title">Hi, I’m Nihan — I design <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">polished, clickable email signatures</span> and crisp brand systems.</h1>
+        <p class="subtitle">Level up your everyday communication with a signature that works everywhere: Gmail, Outlook, mobile, and webmail. Get pixel-perfect HTML, assets, and an easy install guide. Fast delivery, friendly revisions.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Order Your Signature</a>
+          <a class="btn btn-outline" href="#work">See Recent Work</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 10px">Signature Preview</h3>
+        <div class="card" style="background:#0b1326">
+          <!-- Demo email signature block -->
+          <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;max-width:520px;margin:auto;color:#111">
+            <tr>
+              <td style="padding:14px">
+                <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;background:#ffffff;border-radius:12px;overflow:hidden">
+                  <tr>
+                    <td style="padding:16px 18px">
+                      <table role="presentation" style="width:100%">
+                        <tr>
+                          <td style="vertical-align:top">
+                            <div style="font:700 16px/1.2 Arial,Helvetica,sans-serif;color:#0f172a">Nihan Rahman</div>
+                            <div style="font:12px/1.4 Arial,Helvetica,sans-serif;color:#334155;margin-top:2px">Graphic Designer • Email Signature</div>
+                            <div style="height:8px"></div>
+                            <table role="presentation" style="font:12px Arial,Helvetica,sans-serif;color:#0f172a">
+                              <tr><td>📞</td><td style="padding-left:8px"><a href="tel:+8801000000000" style="color:#2563eb;text-decoration:none">+880 1XXXXXXXXX</a></td></tr>
+                              <tr><td>✉️</td><td style="padding-left:8px"><a href="mailto:hello@yourmail.com" style="color:#2563eb;text-decoration:none">hello@yourmail.com</a></td></tr>
+                              <tr><td>🌐</td><td style="padding-left:8px"><a href="https://yourwebsite.com" style="color:#2563eb;text-decoration:none">yourwebsite.com</a></td></tr>
+                            </table>
+                          </td>
+                          <td style="text-align:right;vertical-align:top">
+                            <img alt="Logo" src="https://via.placeholder.com/72x72.png?text=Logo" width="72" height="72" style="border-radius:12px;border:1px solid #e2e8f0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- /Demo signature -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="lead">Pixel-perfect deliverables tailored to your brand.</p>
+      <div class="grid grid-3">
+        <div class="card feature">
+          <div class="badge"></div>
+          <div>
+            <h3>Email Signature (HTML / PNG)</h3>
+            <p class="muted">Responsive, clickable signature with icons, links, and install guide for Gmail, Outlook, Apple Mail, etc.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="badge"></div>
+          <div>
+            <h3>Brand Identity Lite</h3>
+            <p class="muted">Logo refinement, color palette, typography picks, and a quick brand sheet for consistency.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="badge"></div>
+          <div>
+            <h3>Team Roll‑out Support</h3>
+            <p class="muted">Bulk signature variants and documentation for teams. Smooth onboarding with step-by-step video.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / GALLERY -->
+  <section id="work" class="section">
+    <div class="container">
+      <h2>Recent Work</h2>
+      <p class="lead">A glimpse of styles and layouts. Click to view full shots.</p>
+      <div class="gallery">
+        <a class="tile" href="#" title="Sample 1"><img src="https://images.unsplash.com/photo-1520975682031-ae8e4c4f3f86?q=80&w=800&auto=format&fit=crop" alt="Sample 1"></a>
+        <a class="tile" href="#" title="Sample 2"><img src="https://images.unsplash.com/photo-1528460033278-a6ba57020470?q=80&w=800&auto=format&fit=crop" alt="Sample 2"></a>
+        <a class="tile" href="#" title="Sample 3"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop" alt="Sample 3"></a>
+        <a class="tile" href="#" title="Sample 4"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop" alt="Sample 4"></a>
+        <a class="tile" href="#" title="Sample 5"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Sample 5"></a>
+        <a class="tile" href="#" title="Sample 6"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop" alt="Sample 6"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2>Pricing</h2>
+      <p class="lead">Simple, transparent packages. Custom quotes available.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Basic</h3>
+          <div class="price">$25</div>
+          <ul class="list">
+            <li>1 signature (HTML + PNG)</li>
+            <li>Clickable icons/links</li>
+            <li>1 revision</li>
+          </ul>
+          <div style="height:12px"></div>
+          <a class="btn btn-outline" href="https://your-order-link.com">Order Basic</a>
+        </div>
+        <div class="card" style="border-color:rgba(59,130,246,.6)">
+          <h3>Standard</h3>
+          <div class="price">$45</div>
+          <ul class="list">
+            <li>2 variants</li>
+            <li>Icon set + assets</li>
+            <li>2 revisions</li>
+          </ul>
+          <div style="height:12px"></div>
+          <a class="btn btn-primary" href="https://your-order-link.com">Order Standard</a>
+        </div>
+        <div class="card">
+          <h3>Premium</h3>
+          <div class="price">$80</div>
+          <ul class="list">
+            <li>Team roll‑out support</li>
+            <li>Install guide + video</li>
+            <li>3 revisions</li>
+          </ul>
+          <div style="height:12px"></div>
+          <a class="btn btn-outline" href="https://your-order-link.com">Order Premium</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Who I am</h3>
+          <p class="muted">I’m Nihan, a professional graphic designer focused on email signature design, logo & identity, and brand systems. I help founders and teams send better-looking emails every day.</p>
+          <p class="muted">Tools I use: Figma, Illustrator, Photoshop. Deliverables you can trust: clean files, clear docs, and quick support.</p>
+        </div>
+        <div class="card">
+          <h3>Testimonials</h3>
+          <p class="quote">“Nihan nailed our signature the first time. The team rollout was smooth and the documentation was clear.” — <strong>House Hack Texas</strong></p>
+          <p class="quote">“Professional, fast, and the signature looks amazing in Gmail and Outlook.” — <strong>Green Farm</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact / Order</h2>
+      <p class="lead">Fill the form or email me directly. I’ll reply within 24 hours.</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <!-- Blogger-friendly contact options -->
+          <form action="mailto:hello@yourmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="package" placeholder="Package (Basic/Standard/Premium)" required>
+            <textarea name="message" rows="5" placeholder="Project details (brand colors, links, deadlines)"></textarea>
+            <button type="submit" class="btn btn-primary" style="border:none;cursor:pointer">Send via Email</button>
+          </form>
+          <p class="muted" style="margin-top:10px">Tip: For reliable submissions, you can replace this with a Google Form link and remove the form above.</p>
+        </div>
+        <div class="card">
+          <h3>Direct Links</h3>
+          <p>
+            <strong>Email:</strong> <a href="mailto:hello@yourmail.com">hello@yourmail.com</a><br>
+            <strong>Phone/WhatsApp:</strong> <a href="tel:+8801XXXXXXXXX">+880 1XXXXXXXXX</a><br>
+            <strong>Portfolio:</strong> <a href="https://yourportfolio.com" target="_blank" rel="noopener">yourportfolio.com</a>
+          </p>
+          <div class="cta">
+            <a class="btn btn-outline" href="https://www.upwork.com" target="_blank" rel="noopener">Order on Upwork</a>
+            <a class="btn btn-outline" href="https://www.fiverr.com" target="_blank" rel="noopener">Order on Fiverr</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Nihan — Email Signature & Brand Identity</div>
+      <div>LinkedIn · Behance · Dribbble</div>
+    </div>
+  </footer>
+
+  <script>
+    // Small helper for current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
